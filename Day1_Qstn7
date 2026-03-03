@@ -1,0 +1,11 @@
+fun main() {
+
+    val num = 6
+    var fac = 1
+
+    for (i in 1..num) {
+        fac *= i
+    }
+
+    println("Factorial of $num is: $fac")
+}
