@@ -1,0 +1,17 @@
+fun main() {
+
+    val secretNum = 5
+    var guess = 1   
+
+    while (guess <= 10) {
+
+        println("Guessing: $guess")
+
+        if (guess == secretNum) {
+            println("Correct! The number is $secretNum")
+            break
+        }
+
+        guess++
+    }
+}
