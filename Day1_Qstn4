@@ -1,0 +1,13 @@
+fun main() {
+
+    val text="Technology is best when it brings people together"
+    var count=0
+    
+    
+    for (vo in text.lowercase()){
+        if(vo=='a' || vo=='e' || vo=='i' || vo=='o' ||vo=='u'){
+            count++
+        }
+    }
+    println("Number of Vovels in the text:$count")
+}
