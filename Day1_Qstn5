@@ -1,0 +1,9 @@
+fun main() {
+
+    val num = listOf(1, 2, 6, 4, 7, 12, 2, 6, 7, 15, 22, 22, 22)
+
+    val uniquenum = num.toSet().toList()
+
+    println("Original list: $num")
+    println("List without duplicates: $uniquenum")
+}
