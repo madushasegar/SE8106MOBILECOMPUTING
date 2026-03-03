@@ -1,0 +1,14 @@
+fun main() {
+     val num1=listOf(-5,-6,-4,0,0,7,6,12,-9)
+     
+     var sum=0
+    for(num in num1){
+        if(num>0){
+            sum+=num
+        }
+    }
+    println("Sum of positive numbers:$sum")
+ 
+
+    
+}
