@@ -1,0 +1,78 @@
+package com.example.practical2
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.graphics.Color
+import com.example.practical2.ui.theme.Practical2Theme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+
+        setContent {
+            Practical2Theme {
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+
+                    Column(modifier = Modifier.padding(innerPadding)) {
+                        Greeting("Android")
+                        Hello()
+                        Hello1()
+                        Hello2()
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun Greeting(name: String) {
+    Text(text = "Hello $name!")
+}
+
+@Composable
+fun Hello() {
+    Text(text = "HI I AM FROM HELLO FUN()")
+}
+
+// 🔹 Large Text
+@Composable
+fun Hello1() {
+    Text(
+        text = "This is Hello1 - Large Text",
+        fontSize = 30.sp
+    )
+}
+
+// 🔹 Blue Text
+@Composable
+fun Hello2() {
+    Text(
+        text = "This is Hello2 - Blue Text",
+        color = Color.Blue,
+        fontSize = 18.sp
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewAll() {
+    Practical2Theme {
+        Column {
+            Greeting("Android")
+            Hello()
+            Hello1()
+            Hello2()
+        }
+    }
+}
